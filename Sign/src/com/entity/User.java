@@ -4,20 +4,34 @@ package com.entity;
 
 public class User {
 
-private int id;//Ö÷¼üID
-private String userName;//ÓÃ»§Ãû³Æ
-private String userCode;//ÓÃ»§±àÂë
+private int id;//ï¿½ï¿½ï¿½ï¿½ID
+private String userName;//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+private String userCode;//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 
-private int   userPassword;//ÓÃ»§ÃÜÂë
-private int   gender;//  ĞÔ±ğ£¨1:Å®¡¢ 2:ÄĞ£©
-private String   birthday;// ³öÉúÈÕÆÚ
-private String  phone;//ÊÖ»ú
-private String  address;//µØÖ·
-private String ClassName;//°à¼¶ĞÕÃû
+private int   userPassword;//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+private int   gender;//  ï¿½Ô±ï¿½1:Å®ï¿½ï¿½ 2:ï¿½Ğ£ï¿½
+private String   birthday;// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+private String  phone;//ï¿½Ö»ï¿½
+private String  address;//ï¿½ï¿½Ö·
+private String ClassName;//ï¿½à¼¶ï¿½ï¿½ï¿½ï¿½
+private int lodeid;    //è§’è‰²id
+private int classid;  //ç­çº§id
 
-private int  age;//ÄêÁä
+public int getClassid() {
+	return classid;
+}
+public void setClassid(int classid) {
+	this.classid = classid;
+}
+public int getLodeid() {
+	return lodeid;
+}
+public void setLodeid(int lodeid) {
+	this.lodeid = lodeid;
+}
+private int  age;//ï¿½ï¿½ï¿½ï¿½
  
-private String  lode_id;// ½ÇÉ«
+private String  lode_id;// ï¿½ï¿½É«
 
 
 public String getClassName() {

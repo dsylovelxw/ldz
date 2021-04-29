@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.entity.Meun;
 import com.entity.User;
 import com.serviceImpl.LoginServiceImpl;
 import com.utils.ReturnResult;
@@ -41,9 +42,9 @@ public class LoginServlet extends AbstractServlet{
 			} else {
 				// 注册了判断用户是否输入正确密码！
 				if (easybuyUserLogin.getUserCode().equals(name) && easybuyUserLogin.getUserPassword()==password) {
-				/*
-				 * List<Menu> menus = new MenuServiceImpl().getMenus(easybuyUserLogin.getId());
-				 */
+				
+				  List<Meun> menus = new LoginServiceImpl().getMenus(lode);
+				 
 					// 登陆成功！账号密码匹配！！
 					request.getSession().setAttribute("easybuyUserLogin", easybuyUserLogin);
 				/* request.getSession().setAttribute("role", easybuyUserLogin.getRoleid()); */
