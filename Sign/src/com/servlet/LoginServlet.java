@@ -47,11 +47,11 @@ public class LoginServlet extends AbstractServlet{
 				  for (Meun meun : menus) {
 					System.out.println("权限："+meun.getmName());
 				}
-				 
+				  			
 					// 登陆成功！账号密码匹配！！
 					request.getSession().setAttribute("easybuyUserLogin", easybuyUserLogin);
-				/* request.getSession().setAttribute("role", easybuyUserLogin.getRoleid()); */
-				/* request.getSession().setAttribute("menus", menus); */
+				 request.getSession().setAttribute("role", easybuyUserLogin.getLodeid());   //在session存储角色id
+				 request.getSession().setAttribute("menus", menus); 
 					  return result.returnSuccess("登录成功！");
 				} else {
 					return result.returnFail("输入的用户名或密码错误！");

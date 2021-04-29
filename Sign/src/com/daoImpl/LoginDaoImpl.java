@@ -69,7 +69,7 @@ public class LoginDaoImpl extends BaseDao implements LoginDao {
 				// sql语句
 				String sql = " SELECT `id`,`mName`,`fatherid`,`mbetn`,`type`,`ishide`,`resUrl`,"
 						+ "`js` FROM `lr_meun` WHERE `id` IN(SELECT `meunId` FROM `lode_meun` "
-						+ "WHERE `lodeId`=?)";
+						+ "WHERE `lodeId`=?) AND `type`=2";
 				Object[] objects = { lode };
 				// 调用父类赋值
 				try {

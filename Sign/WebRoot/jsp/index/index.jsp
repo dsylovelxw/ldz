@@ -13,8 +13,8 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1">
 <title>layout 管理系统大布局 - Layui</title>
-<script src="/ceshi/admin/lib/jquery-3.4.1/jquery-3.4.1.min.js"></script>
-<link href="/ceshi/admin/lib/layui-v2.5.5/css/layui.css" rel="stylesheet">
+<script type="text/javascript" src="<%=basePath %>jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="<%=basePath %>layui-v2.5.5/css/layui.css" media="all">
 </head>
 <!-- <body class="layui-layout-body">
 	<button class="layui-btn layui-btn-radius layui-btn-normal">提示按钮</button> -->
@@ -61,7 +61,7 @@
 				<c:forEach var="list" items="${menus}">
 						<dl class="layui-nav-child">
 									<dd>
-										<a href="javascript:;" onclick="clickLefttt('${list.xinurl}','${list.id}','${list.jsurl}')">${list.mname }</a>
+										<a href="javascript:;" onclick="clickLefttt()">${list.mName }</a>
 									</dd>
 						</dl>
 				</c:forEach></li>
@@ -77,7 +77,7 @@
 		© layui.com - 底部固定区域
 	</div>
 </div>
-<script src="/ceshi/admin/lib/layui-v2.5.5/layui.js"></script>
+<script src="<%=basePath %>layui-v2.5.5/layui.js" charset="utf-8"/></script>
 <script type="text/javascript">
 
 function clickLefttt(url,quanid,jsurl) {
