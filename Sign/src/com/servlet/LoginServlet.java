@@ -43,7 +43,10 @@ public class LoginServlet extends AbstractServlet{
 				// 注册了判断用户是否输入正确密码！
 				if (easybuyUserLogin.getUserCode().equals(name) && easybuyUserLogin.getUserPassword()==password) {
 				
-				  List<Meun> menus = new LoginServiceImpl().getMenus(lode);
+				  List<Meun> menus = new LoginServiceImpl().getMenus(easybuyUserLogin.getLodeid());
+				  for (Meun meun : menus) {
+					System.out.println("权限："+meun.getmName());
+				}
 				 
 					// 登陆成功！账号密码匹配！！
 					request.getSession().setAttribute("easybuyUserLogin", easybuyUserLogin);

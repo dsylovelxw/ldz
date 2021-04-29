@@ -31,7 +31,7 @@ public class LoginDaoImpl extends BaseDao implements LoginDao {
 		// 创建连接字符
 		ResultSet rs = null;
 		User user = new User();
-		String sql = "SELECT `id`,`userCode`,`userName`,`userPassword` FROM `lr_user` WHERE `userCode` =? AND `userPassword`=?";
+		String sql = "SELECT `id`,`userCode`,`userName`,`userPassword`,`lodeid` FROM `lr_user` WHERE `userCode` =? AND `userPassword`=?";
 		Object[] objects = { loginName, pwd };
 		rs = excuteQuery(sql, objects);
 		if (rs != null) {
@@ -41,9 +41,11 @@ public class LoginDaoImpl extends BaseDao implements LoginDao {
 					String userCode = rs.getString(2);
 					String userName = rs.getString(3);
 					int pwd1 = rs.getInt(4);
+					int lodeid=rs.getInt(5);
 					user.setUserCode(userCode);
 					user.setUserName(userName);
 					user.setUserPassword(pwd1);
+					user.setLodeid(lodeid);
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

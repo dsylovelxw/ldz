@@ -37,7 +37,7 @@ layui.use(['form','layer','jquery'],function(){
            				layer.msg(data.message);
            				setTimeout(function(){
             	            //top.layer.close(index);
-            	            window.location = '/Sign In/jsp/index/index.jsp';
+            	            window.location = '/Sign/jsp/index/index.jsp';
         	        	},1000);
            			}else{
            				layer.msg(data.message);
