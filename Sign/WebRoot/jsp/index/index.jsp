@@ -61,7 +61,7 @@
 				<c:forEach var="list" items="${menus}">
 						<dl class="layui-nav-child">
 									<dd>
-										<a href="javascript:;" onclick="clickLefttt()">${list.mName }</a>
+										<a href="javascript:;" onclick="clickLefttt('${list.resUrl}','${list.id}','${list.js}')">${list.mName }</a>
 									</dd>
 						</dl>
 				</c:forEach></li>
@@ -81,6 +81,7 @@
 <script type="text/javascript">
 
 function clickLefttt(url,quanid,jsurl) {
+alert("按钮路径"+url+"\t权限id"+quanid+"\t列表路径："+jsurl);
 	$(".dd").load(url+"&quanid="+quanid,function(event){
 		var sc=document.createElement("script");
 		sc.src=jsurl;
